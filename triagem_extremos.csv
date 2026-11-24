@@ -1,0 +1,9 @@
+﻿,Q1,Q3,IQR,Limite inferior,Limite superior,Registros sinalizados
+time_in_hospital,2.0,6.0,4.0,-4.0,12.0,2252
+num_lab_procedures,31.0,57.0,26.0,-8.0,96.0,143
+num_procedures,0.0,2.0,2.0,-3.0,5.0,4954
+num_medications,10.0,20.0,10.0,-5.0,35.0,2557
+number_outpatient,0.0,0.0,0.0,0.0,0.0,16739
+number_emergency,0.0,0.0,0.0,0.0,0.0,11383
+number_inpatient,0.0,1.0,1.0,-1.5,2.5,7049
+number_diagnoses,6.0,9.0,3.0,1.5,13.5,281
