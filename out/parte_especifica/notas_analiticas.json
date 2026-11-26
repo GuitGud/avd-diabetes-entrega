@@ -1,0 +1,162 @@
+{
+  "E1": {
+    "id": "E1",
+    "titulo": "Distribuição etária",
+    "o_que_mostra": "Número de internações por faixa etária de dez anos, com a parte de reinternações em menos de 30 dias empilhada em laranja.",
+    "interpretacao": "A base é de pacientes mais velhos: 25,6% das internações estão entre 70 e 80 anos e 81,6% entre 50 e 90. A fatia laranja acompanha o tamanho de cada faixa. A taxa fica entre 9,7% e 12,1% dos 30 aos 100 anos, com pico de 14,2% entre 20 e 30 anos, uma faixa pequena (1.657 internações). A idade, sozinha, não separa bem quem volta rápido.",
+    "escolha_visual": "Barras empilhadas em duas cores mostram o volume de cada faixa e, ao mesmo tempo, a parte que volta em menos de 30 dias. O eixo x segue a ordem natural das faixas, e o laranja é a cor do desfecho de interesse em todo o projeto.",
+    "versao": "Notas do grupo"
+  },
+  "E2": {
+    "id": "E2",
+    "titulo": "Permanência por desfecho",
+    "o_que_mostra": "Boxplot da permanência hospitalar em dias para cada desfecho: sem reinternação registrada, após 30 dias e em menos de 30 dias.",
+    "interpretacao": "As medianas são quase iguais: 4 dias para <30 e >30 e 3 dias para quem não foi reinternado. As caixas se sobrepõem bastante. A média é um pouco maior em <30 (4,77 dias, contra 4,35 nas demais). A permanência tem relação fraca com a reinternação rápida e não diferencia os grupos tão bem quanto o histórico.",
+    "escolha_visual": "Os três boxplots ficam lado a lado e na mesma escala, para comparar mediana e dispersão. Cada caixa usa a cor do seu desfecho, a mesma dos outros gráficos.",
+    "versao": "Notas do grupo"
+  },
+  "E3": {
+    "id": "E3",
+    "titulo": "Medicamentos por internação",
+    "o_que_mostra": "Distribuição do número de medicamentos por internação em três painéis, um por desfecho, com a curva de densidade (KDE) em vermelho na escala de contagem.",
+    "interpretacao": "As três distribuições têm a mesma forma: assimétricas à direita, com pico entre 10 e 20 medicamentos e cauda até cerca de 80. A mediana sobe pouco de NO (14) para >30 (15) e <30 (16). Como as alturas refletem o tamanho de cada grupo, o que importa comparar é a forma, e ela quase não muda.",
+    "escolha_visual": "Um painel por desfecho evita sobrepor barras de grupos com tamanhos muito diferentes. A cor de cada painel é a cor do desfecho, e a KDE em vermelho contrasta com as barras para destacar a forma. O eixo x é o mesmo (0 a 85) nos três painéis.",
+    "versao": "Notas do grupo"
+  },
+  "E4": {
+    "id": "E4",
+    "titulo": "Correlações por classe do desfecho",
+    "o_que_mostra": "Quatro matrizes de correlação entre as oito variáveis numéricas: Pearson e Spearman, calculadas separadamente para <30 dias e para as demais categorias.",
+    "interpretacao": "Nenhuma correlação é forte. A maior é entre permanência e medicamentos (0,46 a 0,48). A diferença mais interessante está entre internações e emergências prévias: a correlação é de 0,32 (Pearson) no grupo <30 e de 0,24 nas demais. Entre quem volta rápido, os dois históricos andam mais juntos, o que motivou o cruzamento M2. Pearson e Spearman dão resultados parecidos, então as conclusões não dependem dos extremos.",
+    "escolha_visual": "Mapa de calor com escala divergente fixa de -1 a 1 (azul negativo, vermelho positivo), igual nos quatro painéis, para que as cores sejam comparáveis. Os valores aparecem em cada célula, porque as diferenças são pequenas.",
+    "versao": "Notas do grupo"
+  },
+  "M1": {
+    "id": "M1",
+    "titulo": "Idade, histórico e desfecho",
+    "o_que_mostra": "Mapa de calor em que as linhas são faixas etárias e as colunas são grupos de internações prévias (0, 1, 2, 3 ou mais). Cada célula mostra a porcentagem de reinternação em menos de 30 dias e o número de internações (n).",
+    "interpretacao": "Na base integral: em quase todas as faixas etárias, a taxa sobe da esquerda para a direita, de 0 até 3 ou mais internações prévias. Entre 70 e 80 anos, por exemplo, vai de 9,6% para 23,5%. O efeito do histórico não é explicado pela idade. As células mais escuras (41,6% entre 20 e 30 anos com 3 ou mais) têm denominadores pequenos e devem ser lidas com cautela.",
+    "escolha_visual": "A escala de cor é fixa de 0 a 100%, para que a mesma cor signifique a mesma taxa em qualquer recorte. O n aparece em cada célula para que uma célula escura com poucos casos não seja lida como resultado forte.",
+    "versao": "Notas do grupo"
+  },
+  "M2": {
+    "id": "M2",
+    "titulo": "Dois históricos simultâneos",
+    "o_que_mostra": "Mapa de calor em que as linhas são os grupos de internações prévias e as colunas os grupos de emergências prévias. Cada célula mostra a porcentagem de reinternação em menos de 30 dias e o n.",
+    "interpretacao": "Na base integral: os dois históricos somam risco. Quem não teve internação nem emergência no ano anterior volta em menos de 30 dias em 8,3% dos casos. Com 3 ou mais internações e 3 ou mais emergências, a taxa é de 33,4% (n=752), quatro vezes maior. As internações prévias pesam mais: sem nenhuma emergência, a taxa já vai de 8,3% para 23,4% quando as internações passam de 0 para 3 ou mais. As emergências acrescentam um efeito menor e menos regular (na linha de 2 internações, a taxa oscila entre 15,2% e 20,5%).",
+    "escolha_visual": "Usamos o mesmo formato e a mesma escala fixa do M1. Cruzar os dois históricos numa única grade permite ver se o risco aumenta quando o paciente tem os dois ao mesmo tempo. O n em cada célula indica onde os grupos são pequenos.",
+    "versao": "Notas do grupo"
+  },
+  "I1": {
+    "id": "I1",
+    "titulo": "Exploração interativa",
+    "o_que_mostra": "Gráfico de dispersão de duas variáveis numéricas escolhidas no painel, com cor por desfecho. Usa uma amostra de até 4.000 internações.",
+    "interpretacao": "O gráfico serve para o leitor formular as próprias perguntas no painel. Na maioria dos pares de variáveis, as cores dos desfechos se misturam, o que confirma que nenhuma variável numérica, sozinha, separa quem volta em menos de 30 dias.",
+    "escolha_visual": "Os pontos são semitransparentes para que as áreas com muitas internações apareçam mais escuras. Os eixos podem ser escolhidos no painel para que o leitor teste outras combinações.",
+    "versao": "Notas do grupo"
+  },
+  "A1": {
+    "id": "A1",
+    "titulo": "Distribuição acumulada (ECDF) das variáveis numéricas",
+    "o_que_mostra": "Distribuição acumulada empírica (ECDF) das oito variáveis numéricas: para cada valor, a proporção de internações com valor menor ou igual a ele.",
+    "interpretacao": "As curvas de histórico sobem quase até o topo no zero: 66,5% das internações não tiveram internação prévia, 88,8% não tiveram emergência e 83,6% não tiveram consulta ambulatorial. Medicamentos e exames sobem de forma gradual. Cerca de 76% das internações usam até 20 medicamentos.",
+    "escolha_visual": "A ECDF mostra a distribuição inteira sem escolher número de classes e permite ler percentis diretamente no eixo y. Uma curva por painel evita misturar escalas diferentes.",
+    "versao": "Notas do grupo"
+  },
+  "A2": {
+    "id": "A2",
+    "titulo": "Distribuições categóricas completas",
+    "o_que_mostra": "Frequência de todas as 40 variáveis categóricas (incluindo o desfecho), distribuídas em cinco páginas.",
+    "interpretacao": "Muitas variáveis de medicamento são quase constantes, e várias categóricas são dominadas por uma única categoria ou por \"Não informado\". Essas variáveis dão pouca informação para separar os desfechos. As categorias raras, com poucos registros, também seriam um problema para um modelo de machine learning: ele veria poucos exemplos delas e tenderia a aprender ruído. Numa modelagem futura, o caminho seria agrupar as categorias raras em \"Outras\" e descartar as variáveis quase constantes.",
+    "escolha_visual": "Barras verticais com as sete categorias mais frequentes e o restante agregado em \"Outras\", só na apresentação. A tabela completa fica no CSV.",
+    "versao": "Notas do grupo"
+  },
+  "H1": {
+    "id": "H1",
+    "titulo": "Histogramas numéricos por desfecho - parte 1",
+    "o_que_mostra": "Histogramas de permanência, exames laboratoriais, procedimentos e medicamentos, com um painel para cada desfecho.",
+    "interpretacao": "As formas são parecidas nos três desfechos. As diferenças de altura vêm principalmente do tamanho dos grupos (NO é cerca de cinco vezes maior que <30). Nenhuma dessas quatro variáveis do período da internação mostra um deslocamento claro no grupo <30.",
+    "escolha_visual": "Grade de linhas (variáveis) por colunas (desfechos), com eixo x compartilhado em cada linha. Assim, a comparação entre desfechos é feita na mesma escala horizontal. As cores são as mesmas dos demais gráficos.",
+    "versao": "Notas do grupo"
+  },
+  "H2": {
+    "id": "H2",
+    "titulo": "Histogramas numéricos por desfecho - parte 2",
+    "o_que_mostra": "Histogramas de consultas ambulatoriais, emergências, internações prévias e diagnósticos, com um painel para cada desfecho.",
+    "interpretacao": "As três contagens de histórico se concentram no zero, mas a cauda das internações prévias é proporcionalmente mais pesada em <30: 49,8% desse grupo teve ao menos uma internação no ano anterior, contra 24,2% em NO. Os diagnósticos se acumulam no valor 9 em todos os desfechos.",
+    "escolha_visual": "Mesma grade do H1, para manter a leitura consistente. Barras espaçadas deixam claro que as variáveis são contagens discretas.",
+    "versao": "Notas do grupo"
+  },
+  "Q1": {
+    "id": "Q1",
+    "titulo": "Registros faltantes por atributo",
+    "o_que_mostra": "Contagem de registros faltantes por atributo, separada por tipo: marcador \"?\", Unknown/Invalid, código administrativo sem informação e None nos exames.",
+    "interpretacao": "O peso falta em quase toda a base (98.569 registros). Especialidade e pagador faltam em cerca de metade e 40% das internações. O None de HbA1c e glicose é o segundo maior volume, mas significa exame não feito, e não dado perdido. Os demais faltantes são pequenos.",
+    "escolha_visual": "Barras horizontais ordenadas da maior para a menor, para ler os nomes dos atributos sem girar o texto. A ordenação cria uma hierarquia visual: o olho começa pelo atributo mais crítico (weight, que falta em quase toda a base) e desce até os menores, sem precisar comparar barras espalhadas. A cor separa o tipo de faltante, porque cada tipo recebe tratamento diferente. Os rótulos trazem a contagem exata.",
+    "versao": "Notas do grupo"
+  },
+  "Q2": {
+    "id": "Q2",
+    "titulo": "Valores extremos",
+    "o_que_mostra": "Um boxplot para cada uma das oito variáveis numéricas, usando todas as internações. Os pontos isolados são os valores além dos limites do IQR.",
+    "interpretacao": "Em consultas ambulatoriais, emergências e internações prévias, quase todos os pontos acima da caixa são contagens plausíveis de uso do serviço, e não erros. Nas emergências, a caixa vira uma linha no zero. Permanência e procedimentos ficam presos aos limites do domínio. Exames laboratoriais têm alguns valores acima de 96, mas são poucos (0,14%).",
+    "escolha_visual": "Escolhemos o boxplot porque ele mostra diretamente a mediana, os quartis e os pontos que a regra do IQR sinaliza. Cada variável tem seu próprio painel e sua própria escala, porque os intervalos são muito diferentes (0 a 6 procedimentos e até 132 exames).",
+    "versao": "Notas do grupo"
+  },
+  "X1": {
+    "id": "X1",
+    "titulo": "Reinternação e internações prévias",
+    "o_que_mostra": "Porcentagem de internações que voltaram em menos de 30 dias em cada grupo de internações prévias no ano anterior (0, 1, 2, 3 ou mais), com o n de cada grupo acima da barra.",
+    "interpretacao": "Na base integral: a taxa de reinternação em menos de 30 dias sobe a cada degrau do histórico de internações: 8,4% sem internação prévia, 12,9% com 1, 17,4% com 2 e 25,7% com 3 ou mais. O último grupo tem uma taxa três vezes maior que o primeiro (diferença de 17,2 pontos percentuais), com 7.049 internações no denominador.",
+    "escolha_visual": "As barras começam em zero para que a altura seja proporcional à taxa. Só o grupo de 3 ou mais aparece em laranja, porque é a mensagem principal; os outros ficam em cinza. A escala vertical é a mesma do X2, para comparar os dois históricos.",
+    "versao": "Notas do grupo"
+  },
+  "X2": {
+    "id": "X2",
+    "titulo": "Reinternação e emergências prévias",
+    "o_que_mostra": "Porcentagem de internações que voltaram em menos de 30 dias em cada grupo de emergências prévias no ano anterior (0, 1, 2, 3 ou mais), com o n de cada grupo acima da barra.",
+    "interpretacao": "Na base integral: o mesmo padrão aparece nas emergências: 10,5% sem emergência prévia, 14,4% com 1, 18,3% com 2 e 24,9% com 3 ou mais (diferença de 14,5 pontos). O grupo de 3 ou mais é pequeno (1.664 internações), e 88,8% da base não teve nenhuma emergência no ano anterior.",
+    "escolha_visual": "Mesmo desenho do X1 (eixo em zero, destaque em laranja no 3 ou mais e mesma escala vertical), para que as duas figuras sejam lidas como um par.",
+    "versao": "Notas do grupo"
+  },
+  "A2_1": {
+    "id": "A2_1",
+    "titulo": "Distribuições categóricas - página 1",
+    "o_que_mostra": "Frequências de race, gender, age, weight, admission_type_id, discharge_disposition_id, admission_source_id e payer_code.",
+    "interpretacao": "Predominam pacientes Caucasian (74,8%) e mulheres (53,8%). O peso é \"Não informado\" em 96,9% dos casos. A admissão de emergência (código 1) responde por 53,1% e a alta para casa (código 1) por 59,2%. Em payer_code, \"Não informado\" (39,6%) supera o Medicare (31,9%).",
+    "escolha_visual": "Barras verticais ordenadas por frequência. Os códigos administrativos aparecem como categorias, e não como números, porque são nominais.",
+    "versao": "Notas do grupo"
+  },
+  "A2_2": {
+    "id": "A2_2",
+    "titulo": "Distribuições categóricas - página 2",
+    "o_que_mostra": "Frequências de medical_specialty, diag_1, diag_2, diag_3, max_glu_serum, A1Cresult, metformin e repaglinide.",
+    "interpretacao": "A especialidade mais comum é \"Não informado\" (49,1%), seguida de medicina interna (14,4%). Os diagnósticos têm centenas de códigos, e o mais frequente (428, insuficiência cardíaca) não passa de 7%. Glicose e HbA1c não foram medidas em 94,7% e 83,3% das internações. A metformina é usada em cerca de 20%.",
+    "escolha_visual": "A agregação em \"Outras\" é necessária para os diagnósticos, com mais de 700 códigos cada. Sem ela o gráfico ficaria ilegível.",
+    "versao": "Notas do grupo"
+  },
+  "A2_3": {
+    "id": "A2_3",
+    "titulo": "Distribuições categóricas - página 3",
+    "o_que_mostra": "Frequências de nateglinide, chlorpropamide, glimepiride, acetohexamide, glipizide, glyburide, tolbutamide e pioglitazone.",
+    "interpretacao": "Quase todos os registros são \"No\". Glipizide (11,2% Steady) e glyburide (9,1%) são os mais usados nesta página. Acetohexamide e tolbutamide praticamente não aparecem.",
+    "escolha_visual": "Mesmo formato das outras páginas, para facilitar a comparação. O eixo y em contagem deixa evidente a dominância do \"No\".",
+    "versao": "Notas do grupo"
+  },
+  "A2_4": {
+    "id": "A2_4",
+    "titulo": "Distribuições categóricas - página 4",
+    "o_que_mostra": "Frequências de rosiglitazone, acarbose, miglitol, troglitazone, tolazamide, examide, citoglipton e insulin.",
+    "interpretacao": "A insulina é a exceção: só 46,6% \"No\", com 30,3% Steady, 12,0% Down e 11,1% Up. Examide e citoglipton têm uma única categoria em toda a base, e as outras ficam próximas de 100% \"No\".",
+    "escolha_visual": "Mesmo formato das outras páginas. Variáveis constantes foram mantidas no gráfico, para documentar que foram verificadas.",
+    "versao": "Notas do grupo"
+  },
+  "A2_5": {
+    "id": "A2_5",
+    "titulo": "Distribuições categóricas - página 5",
+    "o_que_mostra": "Frequências das combinações de medicamentos, de change, de diabetesMed e do desfecho readmitted.",
+    "interpretacao": "As combinações são raríssimas. Houve mudança na medicação de diabetes em 46,2% das internações, e 77,0% receberam algum medicamento para diabetes. O desfecho se divide em 53,9% NO, 34,9% >30 e 11,2% <30.",
+    "escolha_visual": "Mesmo formato das outras páginas. A página termina com o desfecho, que serve de referência para todas as proporções do projeto.",
+    "versao": "Notas do grupo"
+  }
+}

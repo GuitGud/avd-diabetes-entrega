@@ -1,0 +1,13 @@
+{
+  "remover_no": false,
+  "n_internacoes": 101766,
+  "n_pacientes": 71518,
+  "n_atributos": 50,
+  "casos_30": 11357,
+  "taxa_30_pct": 11.159915885462727,
+  "duplicatas_completas": 0,
+  "duplicatas_encounter_id": 0,
+  "ocorrencias_extremas_por_atributo": 45358,
+  "n_verificacoes": 54,
+  "source_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97"
+}

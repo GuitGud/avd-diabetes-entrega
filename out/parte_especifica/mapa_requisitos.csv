@@ -1,0 +1,20 @@
+﻿id,criterio,evidencia,onde_encontrar,situacao
+E01,Exploração - estrutura e tipos,estrutura_atributos.csv (50 atributos),Notebook: Estrutura; painel: Exploração > Estrutura,Implementado no material; avaliação acadêmica cabe à docente.
+E02,Exploração - faltantes e cobertura,mecanismos_ausencia.csv; padroes_ausencia.csv,Notebook: Qualidade; painel: Qualidade,Implementado no material; avaliação acadêmica cabe à docente.
+E03,Exploração - inconsistências,auditoria_inconsistencias.csv (54 verificações),Notebook: Qualidade; relatório: Qualidade,Implementado no material; avaliação acadêmica cabe à docente.
+E04,Exploração - outliers,outliers_iqr.csv; figura Q2; extremos simultâneos (medicamentos × internações prévias),Notebook e painel: Qualidade; relatório: Extremos,Implementado no material; avaliação acadêmica cabe à docente.
+E05,Exploração - mecanismo de ausência,Hipóteses por atributo; limites de MCAR/MAR/MNAR,Relatório: Ausências; explicações: decisões D01-D04,Implementado no material; avaliação acadêmica cabe à docente.
+E06,Exploração - tratamento justificado,"Preservação de linhas, categorias explícitas e sensibilidades",Relatório: Qualidade; explicações: registro de decisões,Implementado no material; avaliação acadêmica cabe à docente.
+E07,Exploração - distribuições completas,descritiva_numerica.csv; frequencias_categoricas.csv; A1 e A2.1-A2.5,Notebook: Distribuições; painel: seletor de atributos,Implementado no material; avaliação acadêmica cabe à docente.
+E08,Exploração - relações com o desfecho,relacoes_com_alvo.csv (47 atributos); Pearson e Spearman,Notebook: Relações; painel: Exploração > Relações,Implementado no material; avaliação acadêmica cabe à docente.
+E09,Exploração - relações multivariadas,M1: idade × histórico × alvo; M2: dois históricos × alvo,"Notebook, painel e relatório: Relações multivariadas",Implementado no material; avaliação acadêmica cabe à docente.
+S01,Storytelling - pergunta e público,Gestores de qualidade e analistas; pergunta explícita,Notebook e painel: Pergunta e narrativa; relatório: Abertura,Implementado no material; avaliação acadêmica cabe à docente.
+S02,Storytelling - percurso e mensagem,Qualidade > distribuições > proporções > estratos > X1/X2,Relatório: Storytelling; explicações: etapas 3-7,Implementado no material; avaliação acadêmica cabe à docente.
+S03,Storytelling - resposta à pergunta,"Proporções, diferença em pontos percentuais e limites",Painel: resposta do recorte; relatório: Resposta à pergunta,Implementado no material; avaliação acadêmica cabe à docente.
+V01,Visualizações - 4 exploratórias e 2 explanatórias,"E1, E2, E3, E4; X1 e X2, com notas individuais","Notebook, relatório e painel",Implementado no material; avaliação acadêmica cabe à docente.
+V02,Visualizações - escolhas e atributos pré-atentivos,"Justificativas por figura: posição, cor, escala, agregação",Notas analíticas; relatório: catálogo visual,Implementado no material; avaliação acadêmica cabe à docente.
+V03,"Visualizações - títulos, eixos, legendas e escalas",Identificação explícita; eixos percentuais com zero; escalas compartilhadas,Figuras E1-E4 e X1-X2; testes de estrutura,Implementado no material; avaliação acadêmica cabe à docente.
+V04,Dashboard - organização e interação,"Abas, filtros interligados, eixos configuráveis e exportação",src/parte_especifica/dashboard.py,Implementado no material; avaliação acadêmica cabe à docente.
+N01,Notas analíticas,"O que mostra, interpretação e escolha visual por figura",notas_analiticas.json; relatório; painel: Notas e catálogo,Implementado no material; avaliação acadêmica cabe à docente.
+N02,Relatório analítico,"Documento com método, evidências, gráficos e resposta à pergunta",relatorio.pdf e relatorio.md,Implementado no material; avaliação acadêmica cabe à docente.
+R01,Rastreabilidade e execução,"Tabelas, SHA-256 da fonte, scripts, dependências e verificações",explicacao.md; resumo.json; validacao.json; README.md,Implementado no material; avaliação acadêmica cabe à docente.

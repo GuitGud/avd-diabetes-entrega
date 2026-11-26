@@ -1,0 +1,3 @@
+﻿atributo,dtype_python,tipo_semantico,papel,descricao,valores_distintos,ausentes_interrogacao,ausentes_pct,exemplos
+encounter_id,int64,Identificador,ID,Identificador da internação; não é medida quantitativa.,101766,0,0.0,2278392 | 149190 | 64410 | 500364
+patient_nbr,int64,Identificador,ID,Identificador do paciente; permite reconhecer registros repetidos.,71518,0,0.0,8222157 | 55629189 | 86047875 | 82442376

@@ -1,0 +1,13 @@
+﻿id,situacao,decisao,justificativa
+D01,Ausências literais ?,Preservar linhas e usar Não informado nas categorias.,Evita exclusão de coortes com cobertura desigual; fonte original preservada.
+D02,Peso em intervalos e muito ausente,Não imputar valor pontual; não incluir no modelo demonstrativo.,Os intervalos não são uma medida exata e a cobertura não sustenta preenchimento numérico simples.
+D03,None em A1Cresult/max_glu_serum,Manter como não realizado.,A categoria possui significado de processo descrito na fonte [2].
+D04,Códigos administrativos sem informação,Decodificar e separar das medidas numéricas.,Não há significado quantitativo para a média de códigos nominais.
+D05,Sexo Unknown/Invalid,Exibir Não informado; manter o registro.,Não inventa categoria e conserva rastreabilidade.
+D06,Repetição de paciente,Manter na base principal e comparar seleção de uma linha por paciente.,Várias internações do mesmo paciente não são duplicatas integrais.
+D07,Outliers por IQR,Preservar valores; documentar e comparar log1p.,Extremo não comprova erro e pode representar histórico relevante.
+D08,Categorias de alta cardinalidade,Agrupar Outras apenas no gráfico.,Melhora a leitura sem apagar categorias da tabela completa.
+D09,Grupos de histórico,"0, 1, 2 e 3 ou mais, com n e casos.",Reduz fragmentação e mantém uma ordem de leitura para comparação.
+D10,Óbito/hospice e representação por paciente,Disponibilizar análise de sensibilidade explícita.,Mostra efeitos da composição do denominador; não altera silenciosamente a base.
+D11,Correlação e estratos,"Apresentar Pearson, Spearman, M1 e M2 sem alegar causalidade.",Controles observacionais disponíveis são limitados e há repetição de pacientes.
+D12,Modelo demonstrativo,Dividir por paciente e ajustar pré-processamento apenas no treino.,Reduz vazamento entre conjuntos; variáveis do período de internação não configuram previsão no momento da admissão.

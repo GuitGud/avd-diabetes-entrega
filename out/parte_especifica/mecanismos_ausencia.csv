@@ -1,0 +1,14 @@
+﻿atributo,tipo,marcador,n,percentual
+race,Marcador ?,?,2273,2.2335554114340743
+weight,Marcador ?,?,98569,96.85847925633315
+payer_code,Marcador ?,?,40256,39.5574160328597
+medical_specialty,Marcador ?,?,49949,49.08220820313268
+diag_1,Marcador ?,?,21,0.02063557573256294
+diag_2,Marcador ?,?,358,0.3517874339170253
+diag_3,Marcador ?,?,1423,1.398305917497003
+gender,Unknown/Invalid,Unknown/Invalid,3,0.002947939390366134
+admission_type_id,Código sem informação,"5,6,8",10396,10.21559263408211
+discharge_disposition_id,Código sem informação,"18,21,25,26",4680,4.598785448971169
+admission_source_id,Código sem informação,"9,15,17,20,21",7067,6.944362557239156
+A1Cresult,None (exame),None,84748,83.27732248491637
+max_glu_serum,None (exame),None,96420,94.74677200636755

@@ -1,0 +1,33 @@
+﻿coorte,variavel,grupo,n,casos,taxa,percentual
+Todas as internações,number_inpatient,0,67630,5706,0.08437084134259944,8.437084134259944
+Todas as internações,number_inpatient,1,19521,2523,0.12924542800061473,12.924542800061472
+Todas as internações,number_inpatient,2,7566,1319,0.17433254031192175,17.433254031192174
+Todas as internações,number_inpatient,3 ou mais,7049,1809,0.2566321464037452,25.66321464037452
+Todas as internações,number_emergency,0,90383,9467,0.10474314860095373,10.474314860095372
+Todas as internações,number_emergency,1,7677,1102,0.14354565585515175,14.354565585515175
+Todas as internações,number_emergency,2,2042,373,0.18266405484818804,18.266405484818804
+Todas as internações,number_emergency,3 ou mais,1664,415,0.24939903846153846,24.939903846153847
+Menor encounter_id por paciente,number_inpatient,0,63077,5025,0.07966453699446709,7.966453699446709
+Menor encounter_id por paciente,number_inpatient,1,5962,748,0.12546125461254612,12.546125461254611
+Menor encounter_id por paciente,number_inpatient,2,1547,280,0.18099547511312217,18.099547511312217
+Menor encounter_id por paciente,number_inpatient,3 ou mais,932,240,0.2575107296137339,25.75107296137339
+Menor encounter_id por paciente,number_emergency,0,66314,5678,0.08562294538106584,8.562294538106583
+Menor encounter_id por paciente,number_emergency,1,3965,438,0.11046658259773014,11.046658259773015
+Menor encounter_id por paciente,number_emergency,2,804,107,0.13308457711442787,13.308457711442786
+Menor encounter_id por paciente,number_emergency,3 ou mais,435,70,0.16091954022988506,16.091954022988507
+Sem alta por óbito/hospice,number_inpatient,0,66245,5690,0.08589327496414824,8.589327496414825
+Sem alta por óbito/hospice,number_inpatient,1,18984,2516,0.13253265908133166,13.253265908133166
+Sem alta por óbito/hospice,number_inpatient,2,7300,1309,0.17931506849315068,17.931506849315067
+Sem alta por óbito/hospice,number_inpatient,3 ou mais,6814,1799,0.2640152626944526,26.40152626944526
+Sem alta por óbito/hospice,number_emergency,0,88249,9431,0.10686806649367131,10.686806649367131
+Sem alta por óbito/hospice,number_emergency,1,7474,1097,0.14677548835964677,14.677548835964677
+Sem alta por óbito/hospice,number_emergency,2,1984,372,0.1875,18.75
+Sem alta por óbito/hospice,number_emergency,3 ou mais,1636,414,0.2530562347188264,25.305623471882637
+"Menor ID por paciente, sem óbito/hospice",number_inpatient,0,61782,5015,0.0811725097924962,8.11725097924962
+"Menor ID por paciente, sem óbito/hospice",number_inpatient,1,5794,747,0.12892647566448048,12.892647566448048
+"Menor ID por paciente, sem óbito/hospice",number_inpatient,2,1501,278,0.18520986009327114,18.520986009327114
+"Menor ID por paciente, sem óbito/hospice",number_inpatient,3 ou mais,896,237,0.26450892857142855,26.450892857142854
+"Menor ID por paciente, sem óbito/hospice",number_emergency,0,64873,5664,0.08730904998998042,8.730904998998042
+"Menor ID por paciente, sem óbito/hospice",number_emergency,1,3882,437,0.11257083977331273,11.257083977331273
+"Menor ID por paciente, sem óbito/hospice",number_emergency,2,789,106,0.13434727503168567,13.434727503168567
+"Menor ID por paciente, sem óbito/hospice",number_emergency,3 ou mais,429,70,0.16317016317016317,16.317016317016318

@@ -1,0 +1,55 @@
+﻿verificacao,ocorrencias,tipo,decisao
+Linhas inteiramente duplicadas,0,Verificação,Não excluir automaticamente; somente duplicatas efetivamente confirmadas seriam removidas.
+encounter_id duplicado,0,Verificação,ID de internação deve ser único; duplicatas exigiriam reconciliação antes de análise.
+Registros adicionais de pacientes já presentes,30248,Estrutura,Não são erros: manter na coorte principal; comparar seleção de menor encounter_id por paciente.
+Tipo/domínio numérico: encounter_id,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: patient_nbr,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: time_in_hospital,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: num_lab_procedures,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: num_procedures,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: num_medications,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: number_outpatient,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: number_emergency,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: number_inpatient,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Tipo/domínio numérico: number_diagnoses,0,Verificação,Não arredondar ou substituir valores inválidos silenciosamente; sinalizar para revisão.
+Categorias fora do domínio: age,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: weight,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: race,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: gender,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: readmitted,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: A1Cresult,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: max_glu_serum,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: change,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: diabetesMed,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: metformin,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: repaglinide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: nateglinide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: chlorpropamide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glimepiride,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: acetohexamide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glipizide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glyburide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: tolbutamide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: pioglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: rosiglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: acarbose,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: miglitol,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: troglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: tolazamide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: examide,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: citoglipton,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: insulin,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glyburide-metformin,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glipizide-metformin,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: glimepiride-pioglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: metformin-rosiglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Categorias fora do domínio: metformin-pioglitazone,0,Verificação,Preservar fonte; sinalizar categorias não previstas em vez de convertê-las automaticamente.
+Código não presente em IDS_mapping: admission_type_id,0,Verificação,Manter e sinalizar código sem mapeamento; não confundir com código mapeado para NULL.
+Código não presente em IDS_mapping: discharge_disposition_id,0,Verificação,Manter e sinalizar código sem mapeamento; não confundir com código mapeado para NULL.
+Código não presente em IDS_mapping: admission_source_id,0,Verificação,Manter e sinalizar código sem mapeamento; não confundir com código mapeado para NULL.
+Formato ICD-9 não usual: diag_1,2646,Verificação,Apenas triagem sintática; formato não valida o diagnóstico. Preservar original e consultar dicionário se houver ocorrência.
+Formato ICD-9 não usual: diag_2,1560,Verificação,Apenas triagem sintática; formato não valida o diagnóstico. Preservar original e consultar dicionário se houver ocorrência.
+Formato ICD-9 não usual: diag_3,1526,Verificação,Apenas triagem sintática; formato não valida o diagnóstico. Preservar original e consultar dicionário se houver ocorrência.
+Sexo Unknown/Invalid,3,Categoria sem informação,Exibir Não informado e manter registro.
+num_lab_procedures igual a zero,0,Alerta de metadados,Preservar e destacar divergência entre valor registrado e critério geral de inclusão descrito na fonte. Não inventar valor positivo.
+num_medications igual a zero,0,Alerta de metadados,Preservar e destacar divergência entre valor registrado e critério geral de inclusão descrito na fonte. Não inventar valor positivo.

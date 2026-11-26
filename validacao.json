@@ -1,0 +1,34 @@
+{
+  "dataset_shape": [
+    101766,
+    50
+  ],
+  "atributos_catalogados": 50,
+  "atributos_relacionados_ao_alvo": 47,
+  "categoricos_com_frequencias_completas": 40,
+  "verificacoes_consistencia": 54,
+  "variaveis_com_triagem_outliers": 8,
+  "notas_analiticas": 18,
+  "graficos_interativos_iniciais": 11,
+  "integridade_numeradores_denominadores": "aprovada",
+  "preservacao_None": "aprovada",
+  "dashboard_inicial": "aprovado",
+  "filtro_vazio": "aprovado",
+  "sensibilidade_por_paciente": "aprovada",
+  "seletor_numerico": "aprovado",
+  "modelo_por_paciente": "aprovado",
+  "execucao_em_conta_google": "não verificada; depende de autenticação e runtime Colab",
+  "source_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+  "notebook": {
+    "celulas_totais": 28,
+    "celulas_eda_executadas": 14,
+    "figuras_com_saida_png": 16,
+    "erros": [],
+    "metodo": "Células executadas sequencialmente por IPython local, com captura de saídas reais.",
+    "instalacao": "dependências já instaladas no teste",
+    "servidor_colab": "não executado em conta Google"
+  },
+  "pdf_paginas": 19,
+  "pdf_revisao_visual": "aprovada",
+  "catalogo_requisitos": 19
+}
