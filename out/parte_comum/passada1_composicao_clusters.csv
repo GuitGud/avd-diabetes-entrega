@@ -1,0 +1,5 @@
+cluster,Insufficient_Weight,Normal_Weight,Overweight_Level_I,Overweight_Level_II,Obesity_Type_I,Obesity_Type_II,Obesity_Type_III,classe_majoritaria,pureza
+0,28,44,145,130,229,199,323,Obesity_Type_III,0.294
+1,45,33,65,94,110,95,1,Obesity_Type_I,0.248
+2,188,164,54,59,7,1,0,Insufficient_Weight,0.397
+3,6,41,12,7,5,2,0,Normal_Weight,0.562

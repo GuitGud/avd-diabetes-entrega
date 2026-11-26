@@ -1,0 +1,8 @@
+,precisao,recall,suporte,prevista_por_algum_cluster
+Insufficient_Weight,0.411,0.528,267,True
+Normal_Weight,0.562,0.145,282,True
+Overweight_Level_I,0.0,0.0,276,False
+Overweight_Level_II,0.0,0.0,290,False
+Obesity_Type_I,0.249,0.313,351,True
+Obesity_Type_II,0.226,0.498,297,True
+Obesity_Type_III,0.344,0.611,324,True
