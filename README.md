@@ -28,3 +28,7 @@ A aba **Gráficos** mostra as seis figuras. Os filtros de idade e permanência r
 | `explicacao.md` | Onde encontrar os itens da avaliação e o que o código faz. |
 | `out/parte_especifica/` | Tabelas e gráficos da análise. |
 | `DATA_SOURCE.md` | Referência e licença da base. |
+
+## Apresentação
+[Arquivo PowerPoint - Diabetes e reinternação hospitalar.pptx](https://github.com/user-attachments/files/35471218/Diabetes.e.reinternacao.hospitalar.Parte.Especifica.AVD.pptx)
+
