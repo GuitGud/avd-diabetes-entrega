@@ -1,7 +1,7 @@
 ,Passada 1 (cotovelo),Passada 2 (k = 7)
-k,4.0,7.0
-acurácia,0.317,0.306
-classes nunca previstas,3.0,2.0
-recall médio (macro),0.308,0.299
-pureza média dos clusters,0.375,0.416
-silhueta,0.191,0.132
+k,6.0,7.0
+acurácia,0.409,0.433
+classes nunca previstas,3.0,0.0
+recall médio (macro),0.384,0.422
+pureza média dos clusters,0.44,0.426
+silhueta,0.14,0.158

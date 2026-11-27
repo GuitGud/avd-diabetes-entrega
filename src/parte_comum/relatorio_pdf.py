@@ -135,6 +135,8 @@ def construir_parte_comum():
         "2.111 registros e 17 atributos: 8 numéricos e 9 categóricos, incluindo o alvo NObeyesdad com 7 classes. "
         "**Não há valores ausentes.**",
         "**24 linhas duplicadas** foram removidas, porque contariam duas vezes nos centróides. Restam 2.087.",
+        "O grupo também removeu **19 registros de categorias muito raras** (bicicleta, moto e álcool \"Sempre\"), "
+        "que desbalanceavam a análise. O K-Means usa 2.068 registros.",
         "Segundo os autores, **77% dos registros são sintéticos (SMOTE)**. Por isso as respostas ordinais "
         "(FCVC, NCP, CH2O, FAF e TUE) aparecem com casas decimais, e as classes são quase balanceadas.",
         "O rótulo é definido pelas **faixas de IMC** (peso / altura²) da OMS.",
@@ -171,7 +173,7 @@ def construir_parte_comum():
     h("5. Pré-processamento e padronização")
     bullets([
         "Binárias viram 0 ou 1, CAEC e CALC viram ordinais de 0 a 3 e MTRANS passa por one-hot, num total de "
-        "20 atributos. O alvo e o IMC ficam de fora, porque o K-Means é não supervisionado.",
+        "18 atributos. O alvo e o IMC ficam de fora, porque o K-Means é não supervisionado.",
         "**Por que padronizar:** o K-Means usa distância euclidiana. Sem padronização, a variável de maior "
         "amplitude domina. O desvio do peso (≈ 26 kg) é cerca de 280 vezes o da altura (≈ 0,09 m), e o "
         "agrupamento seria praticamente só pelo peso. O StandardScaler leva cada coluna para média 0 e "
@@ -182,8 +184,9 @@ def construir_parte_comum():
     h(f"6. Passada 1: k livre (2 a 10), Método do Cotovelo → k = {k1}")
     figura("C8_cotovelo.png", 230)
     p("A inércia cai de forma quase linear, sem uma dobra nítida. Pelo critério da maior distância até a reta "
-      f"entre k=2 e k=10, o cotovelo fica em **k = {k1}**, empatado com k = 6, e escolhemos o menor. A silhueta, "
-      "sempre abaixo de 0,25, mostra clusters pouco compactos: os dados não têm grupos naturais bem separados.")
+      f"entre k=2 e k=10, o cotovelo fica em **k = {k1}** (0,190), muito perto de k = 5 (0,175) e k = 4 (0,172). "
+      "A silhueta, sempre abaixo de 0,22, mostra clusters pouco compactos: os dados não têm grupos naturais "
+      "bem separados.")
     figura("passada1_matriz_confusao.png", 290)
     tabela(m1.reset_index().rename(columns={"index": "classe"}), [150, 80, 80, 80, 109])
 
@@ -206,9 +209,10 @@ def construir_parte_comum():
         "captura essa divisão primeiro: o cluster do automóvel mistura todas as classes de peso.",
         "**Dentro de cada massa, as classes formam um gradiente ordenado,** de Insufficient a Obesity III, sem "
         "fronteiras. É a imagem de um contínuo (IMC), e não de grupos separados.",
-        "**Na passada 2, três clusters são minúsculos** (a pé, moto e bicicleta). O K-Means gastou 3 dos 7 "
-        "clusters em categorias raras de transporte.",
-        "Os dois componentes explicam só 25,4% da variância, mas a baixa pureza dos clusters, medida nas 20 "
+        "**Alguns clusters são pequenos e espalhados no centro,** porque são definidos por um hábito raro, e não "
+        "pelo peso: fumantes e quem anda a pé (passada 1); quem monitora calorias, quem não come alimentos "
+        "calóricos e quem anda a pé (passada 2).",
+        "Os dois componentes explicam só 28,4% da variância, mas a baixa pureza dos clusters, medida nas 18 "
         "dimensões, confirma a mistura.",
     ])
 
@@ -220,17 +224,24 @@ def construir_parte_comum():
     p("Texto redigido com apoio de IA (Claude) a partir dos resultados. O grupo revisou e se responsabiliza.")
     p("Comparação das passadas", "Heading2")
     bullets([
-        f"Passada 1 (k = {k1}): acurácia de {pct(acc1)}. Com só {k1} clusters, 3 das 7 classes nunca são previstas.",
-        f"Passada 2 (k = 7): acurácia de {pct(acc2)}, sem melhora. **Overweight I e II continuam sem cluster "
-        "próprio.** A pureza sobe pouco (de 0,375 para 0,416) e a silhueta cai (de 0,191 para 0,132).",
+        f"Passada 1 (k = {k1}): acurácia de {pct(acc1)}. 3 das 7 classes nunca são previstas (Overweight I, "
+        "Overweight II e Obesity II).",
+        f"Passada 2 (k = 7): acurácia de {pct(acc2)}. Todas as classes passam a ser previstas, mas com recall muito "
+        "baixo nas faixas do meio: Normal (11,1%), **Overweight I (12,8%) e Overweight II (22,5%)**.",
+        "Só Obesity III é bem recuperada (recall de 99,4%): a classe é 99,7% feminina e muito pesada, e o K-Means "
+        "forma um cluster de mulheres com peso alto que coincide com ela.",
+        "A melhora é pequena: a pureza quase não muda (0,440 e 0,426) e a silhueta segue baixa (0,140 e 0,158).",
     ])
     p("O que os clusters realmente separam", "Heading2")
     bullets([
-        "Na passada 2, três clusters são definidos pelo **meio de transporte**: a pé (55 pessoas), moto (11) e "
-        "bicicleta (7). O cluster de automóvel reúne as pessoas mais velhas, com média de 32 anos contra cerca de 22.",
-        "Esse é um efeito da padronização sobre dummies raras: MTRANS_Bike vale 1 em 0,3% das linhas e, "
-        "padronizada, vira z ≈ 17. Para o K-Means, andar de bicicleta pesa mais do que qualquer diferença de peso.",
-        "Os 20 atributos entram com peso igual, mas só altura e peso definem o rótulo.",
+        "O grupo já tinha removido as categorias mais raras (bicicleta, moto e álcool \"Sempre\"). Mesmo assim, o "
+        "K-Means forma clusters em torno de **outros binários raros**: fumantes (42 dos 43) e quem anda a pé (53) "
+        "na passada 1; quem monitora calorias (86 dos 93), quem não come alimentos calóricos (148) e quem anda a "
+        "pé (54) na passada 2.",
+        "É um efeito da padronização: SMOKE vale 1 em só 2% das linhas e, padronizado, vira z ≈ 6,9. Para o "
+        "K-Means, fumar afasta duas pessoas mais do que vários quilos de diferença.",
+        "Os demais clusters seguem meio de transporte, sexo e idade: automóvel (média de 32 anos), homens pesados "
+        "e mulheres pesadas. Os 18 atributos entram com peso igual, mas só altura e peso definem o rótulo.",
     ])
     p("As classes originais fazem sentido? Sobrepeso × Obesidade I", "Heading2")
     bullets([
@@ -239,10 +250,10 @@ def construir_parte_comum():
         "quase idênticos em todos os atributos, mas ficam em classes diferentes. Não existe uma lacuna de "
         "densidade que o K-Means possa encontrar.",
         "Neste dataset, a fronteira é ainda mais borrada, porque o SMOTE interpola pontos entre classes vizinhas. "
-        "Por isso Sobrepeso I e II nunca são majoritárias em nenhum cluster: ficam espremidas entre Normal "
-        "e Obesidade I.",
-        "Os dados sustentam no máximo 3 ou 4 grupos amplos (abaixo do peso ou normal, sobrepeso, obesidade e "
-        "obesidade grave), o que coincide com o cotovelo em k = 4.",
+        "Por isso Sobrepeso I e II não têm cluster próprio na passada 1 e, na passada 2, só aparecem em clusters "
+        "definidos por hábitos, com recall abaixo de 23%: ficam espremidas entre Normal e Obesidade I.",
+        "Os dados sustentam no máximo 3 ou 4 grupos amplos. É a mesma ideia do agrupamento em 4 níveis que o "
+        "grupo usou na EDA: abaixo do peso, peso normal, acima do peso e obeso.",
     ])
     p("Análise complementar", "Heading2")
     p(f"Com k = 7, a acurácia muda conforme os atributos usados: só altura e peso, "
@@ -252,7 +263,8 @@ def construir_parte_comum():
     p("Limitações", "Heading2")
     bullets([
         "O K-Means supõe clusters esféricos e de tamanho parecido. A distância euclidiana sobre dados mistos é "
-        "uma aproximação, e K-Prototypes ou o agrupamento das categorias raras de MTRANS seriam melhorias.",
+        "uma aproximação. Binárias raras distorcem o resultado mesmo após remover as categorias mais raras; dar "
+        "menos peso a elas, ou usar K-Prototypes, seriam melhorias.",
         "Os resultados dependem da semente (random_state = 42, n_init = 10). Os dados são majoritariamente "
         "sintéticos.",
     ])

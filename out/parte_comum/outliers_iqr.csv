@@ -1,9 +1,10 @@
 ,n_outliers,min,max,%
-Age,167,14.0,61.0,8.0
-Height,1,1.45,1.98,0.05
-Weight,1,39.0,173.0,0.05
-FCVC,0,1.0,3.0,0.0
-NCP,577,1.0,4.0,27.65
-CH2O,0,1.0,3.0,0.0
-FAF,0,0.0,3.0,0.0
-TUE,0,0.0,2.0,0.0
+Idade,164,14.0,61.0,7.93
+Altura,1,1.45,1.98,0.05
+Peso,1,39.0,173.0,0.05
+Consumo de vegetais,0,1.0,3.0,0.0
+Refeições por dia,573,1.0,4.0,27.71
+Consumo de água diário,0,1.0,3.0,0.0
+Frequencia atividade física,0,0.0,3.0,0.0
+Tempo de tela médio,0,0.0,2.0,0.0
+IMC,0,12.998684889724604,50.81175280566433,0.0
