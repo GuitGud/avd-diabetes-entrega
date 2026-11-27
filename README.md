@@ -82,3 +82,8 @@ O uso de IA está descrito em [docs/DECLARACAO_IA.pdf](docs/DECLARACAO_IA.pdf). 
 
 - Clore, J.; Cios, K.; DeShazo, J.; Strack, B. (2014). *Diabetes 130-US Hospitals for Years 1999-2008*. UCI Machine Learning Repository. https://doi.org/10.24432/C5230J (CC BY 4.0)
 - Palechor, F. M.; De la Hoz Manotas, A. (2019). *Dataset for estimation of obesity levels based on eating habits and physical condition in individuals from Colombia, Peru and Mexico*. Data in Brief, 25, 104344. https://doi.org/10.1016/j.dib.2019.104344. Dados: UCI Machine Learning Repository, id 544 (CC BY 4.0)
+
+
+Matriz de Contribuição:
+Tomás: Parte Comum do projeto e Revisar erros
+
